@@ -170,10 +170,6 @@ $bp-medium: 64em; // 1024px
 $bp-large: 85.375em; // 1366px
 $bp-xlarge: 120em; // 1920px
 $bp-xxlarge: 160em; // 2560px */
-
-    @media only screen and (max-width: 48em) {
-
-    }
   
     /* Small devices (portrait tablets and large phones, 600px and up) */
     @media only screen and (max-width: 48em) {
@@ -242,6 +238,21 @@ $bp-xxlarge: 160em; // 2560px */
         section img {
             max-width: 32vw;
         }
+
+        .card {
+            width: 24vw;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffff;
+            border-radius: 60px;
+            box-shadow: 0px 4px 10px #3d3d3d54;
+            box-sizing: border-box;
+            padding: 32px 3vw;
+        }
+
         .card p {
             text-align: center;
             margin-bottom: 40px;
@@ -250,6 +261,13 @@ $bp-xxlarge: 160em; // 2560px */
         .card img {
             max-width: 8vw;
             margin-bottom: 20px;
+        }
+    } 
+
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 64em) {
+        section img {
+            max-width: 26vw;
         }
 
         .card {
@@ -265,65 +283,38 @@ $bp-xxlarge: 160em; // 2560px */
             box-sizing: border-box;
             padding: 32px 3vw;
         }
-    } 
 
-    /* Large devices (laptops/desktops, 992px and up) */
-    @media only screen and (min-width: 64em) {
-    section img {
-        max-width: 26vw;
-    }
-    .card p {
-        text-align: center;
-        margin-bottom: 25px;
-    }
+        .card p {
+            text-align: center;
+            margin-bottom: 25px;
+        }
 
-    .card img {
-        max-width: 7vw;
-        margin-bottom: 15px;
-    }
+        .card img {
+            max-width: 7vw;
+            margin-bottom: 15px;
+        }
 
-    .card {
-        width: 24vw;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #ffff;
-        border-radius: 60px;
-        box-shadow: 0px 4px 10px #3d3d3d54;
-        box-sizing: border-box;
-        padding: 32px 3vw;
-    }
     } 
 
     /* Extra large devices (large laptops and desktops, 1200px and up) */
     @media (min-width: 120em) {
-    section img {
-        max-width: 36vw;
-    }
-    .card p {
-        text-align: center;
-        margin-bottom: 40px;
-    }
+        section img {
+            max-width: 36vw;
+        }
 
-    .card img {
-        max-width: 8vw;
-        margin-bottom: 20px;
-    }
+        .card p {
+            text-align: center;
+            margin-bottom: 40px;
+        }
 
-    .card {
-        width: 24vw;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #ffff;
-        border-radius: 60px;
-        box-shadow: 0px 4px 10px #3d3d3d54;
-        box-sizing: border-box;
-        padding: 48px 3vw;
-    }
+        .card img {
+            max-width: 8vw;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            width: 24vw;
+            padding: 48px 3vw;
+        }
 
     }
