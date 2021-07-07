@@ -119,6 +119,54 @@ section button {
     transition: 0.25s;
 }
 
+.menu-btn {
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger {
+    width: 50px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .5s ease-in-out;
+}
+.menu-btn__burger::before, .menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .5s ease-in-out;
+}
+.menu-btn__burger::before {
+    transform: translateY(-16px);
+}
+.menu-btn__burger::after {
+    transform: translateY(16px);
+}
+
+.menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
 #cards {
     display: flex;
     justify-content: space-evenly;
@@ -195,6 +243,14 @@ $bp-xxlarge: 160em; // 2560px */
             height: auto;
         }
 
+        .menu-btn {
+            display: flex;
+        }
+
+        nav {
+            justify-content: space-between;
+        }
+
         #content {
             height: auto;
         }
@@ -225,6 +281,11 @@ $bp-xxlarge: 160em; // 2560px */
             margin-bottom: 70px;
         }
 
+        button {
+            font-size: 2vw;
+            padding: 2em 4.4em;
+        }
+
         #inner {
             margin: 0px 1em 0px 1em;
         }
@@ -252,6 +313,18 @@ $bp-xxlarge: 160em; // 2560px */
 
     /* Medium devices (landscape tablets, 768px and up) */
     @media only screen and (min-width: 768px) {
+        .menu-btn {
+            display: flex;
+        }
+
+        nav {
+            justify-content: space-between;
+        }
+
+        nav ul, nav button {
+            display: none;
+        }
+
         section img {
             max-width: 32vw;
         }
@@ -286,6 +359,14 @@ $bp-xxlarge: 160em; // 2560px */
 
     /* Large devices (laptops/desktops, 992px and up) */
     @media only screen and (min-width: 64em) {
+        .menu-btn {
+            display: none;
+        }
+
+        nav ul, nav button {
+            display: flex;
+        }
+
         section img {
             max-width: 26vw;
         }
@@ -317,6 +398,10 @@ $bp-xxlarge: 160em; // 2560px */
 
     /* Extra large devices (large laptops and desktops, 1200px and up) */
     @media (min-width: 120em) {
+        .menu-btn {
+            display: none;
+        }
+
         section img {
             max-width: 36vw;
         }
