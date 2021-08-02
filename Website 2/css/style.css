@@ -1,1 +1,6 @@
-
+:root {
+    --gray:   #36333D;
+    --white:  #ffff;
+    --purple:   #39297B
+    --bord-rad-xl: 48px;
+}
